@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<!-- Sert d'exemple pour l'utilisation d'une servlet -->
+	<servlet>
+		<servlet-name>guestBook</servlet-name>
+		<servlet-class>code.GuestbookServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>guestBook</servlet-name>
+		<url-pattern>/guest</url-pattern>
+	</servlet-mapping>
+
+	<!-- Notre servlet permettant d'enregistrer dans le DataStore -->
+
+	<servlet>
+		<servlet-name>Upload</servlet-name>
+		<servlet-class>code.UploadServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Upload</servlet-name>
+		<url-pattern>/upload</url-pattern>
+	</servlet-mapping>
+
+
+
+
+
+	<!-- Pour indiquer que notre page d'acceuil -->
+	<welcome-file-list>
+		<welcome-file>Guestbook.jsp</welcome-file>
+	</welcome-file-list>
+
+
+
+
+</web-app>
